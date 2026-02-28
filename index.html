@@ -501,7 +501,50 @@
         </ol>
 
         <div class="button-container">
-            <a href="mailto:paul.ledsham@salford.ac.uk?subject=UniVibe%20Careers%20Pilot%20Discussion" class="cta-button">
-                Express Interest / Arrange a Discussion
-            </a>
+            <button class="cta-button" onclick="document.getElementById('feedback-form').scrollIntoView();">
+                Express Interest / Provide Feedback
+            </button>
         </div>
+
+        <!-- feedback form placeholder will appear below -->
+
+    <!-- FEEDBACK FORM -->
+    <div class="page page-break" id="feedback-form">
+        <h1>Send Us Your Thoughts</h1>
+        <form id="contactForm">
+            <label for="fname">Name</label><br>
+            <input type="text" id="fname" name="fname" required style="width:100%;padding:8px;margin-bottom:10px;"><br>
+            <label for="interest">Interested in continuing conversation?</label><br>
+            <select id="interest" name="interest" style="width:100%;padding:8px;margin-bottom:10px;">
+                <option value="yes">Yes</option>
+                <option value="maybe">Maybe</option>
+                <option value="no">No</option>
+            </select><br>
+            <label for="comments">Comments</label><br>
+            <textarea id="comments" name="comments" rows="4" style="width:100%;padding:8px;margin-bottom:10px;"></textarea><br>
+            <button type="button" class="cta-button" onclick="saveFeedback()">Submit</button>
+        </form>
+        <p style="font-size:0.9em;color:#666;">Submitting will download your responses as a text file you can send or keep for your records.</p>
+    </div>
+
+    <script>
+    function saveFeedback() {
+        var data = {
+            name: document.getElementById('fname').value,
+            interest: document.getElementById('interest').value,
+            comments: document.getElementById('comments').value,
+            timestamp: new Date().toISOString()
+        };
+        var blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+        var url = URL.createObjectURL(blob);
+        var a = document.createElement('a');
+        a.href = url;
+        a.download = 'univibe-feedback-' + Date.now() + '.json';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+        alert('File downloaded; please share it with me or keep for your records.');
+    }
+    </script>
+</body>
