@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UniVibe – Careers & Enterprise Briefing</title>
+    <style>
+        @media print {
+            body { margin: 0; }
+            .page-break { page-break-before: always; }
+            .no-print { display: none; }
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            max-width: 210mm;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f8f9fa;
+        }
+        
+        .page {
+            background: white;
+            padding: 40px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .cover {
+            text-align: center;
+            padding: 80px 40px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        .cover h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .cover .tagline {
+            font-size: 24px;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+        
+        .cover .details {
+            font-size: 16px;
+            margin-top: 60px;
+            opacity: 0.85;
+        }
+        
+        h1 {
+            color: #667eea;
+            font-size: 32px;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+        
+        h2 {
+            color: #764ba2;
+            font-size: 24px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        
+        h3 {
+            color: #667eea;
+            font-size: 18px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        
+        .highlight-box {
+            background: #f0f4ff;
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .metric-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .metric-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .metric-card .number {
+            font-size: 30px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        
+        .metric-card .label {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #e1e8ed;
+        }
+        
+        th {
+            background: #667eea;
+            color: white;
+            font-weight: 600;
+        }
+        
+        tr:hover {
+            background: #f8f9fa;
+        }
+        
+        .competitive-table td:first-child {
+            font-weight: 600;
+            color: #667eea;
+        }
+        
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+            margin: 20px 0;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: #667eea;
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -33px;
+            top: 5px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #667eea;
+            border: 3px solid white;
+        }
+        
+        .timeline-item strong {
+            color: #667eea;
+        }
+        
+        ul, ol {
+            margin: 10px 0;
+            padding-left: 25px;
+        }
+        
+        li {
+            margin: 8px 0;
+        }
+        
+        .quote {
+            font-style: italic;
+            color: #666;
+            border-left: 4px solid #764ba2;
+            padding-left: 20px;
+            margin: 20px 0;
+        }
+
+        .financial-summary {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .button-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 40px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 18px;
+            cursor: pointer;
+            border: none;
+        }
+
+        .cta-button:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- COVER PAGE -->
+    <div class="page cover">
+        <h1>UniVibe</h1>
+        <div class="tagline">Turning Student Work into Career Capital</div>
+        <div class="tagline" style="font-size: 20px; margin-top: 40px;">
+            Careers & Enterprise Briefing<br>
+            University of Salford
+        </div>
+        <div class="details">
+            Prepared for: Paul [Surname], Careers & Enterprise<br>
+            Prepared by: [Your Name], MSc Entrepreneurship & Innovation<br>
+            February 2026
+        </div>
+    </div>
+
+    <!-- INTRO & CONTEXT -->
+    <div class="page page-break">
+        <h1>Introduction & Context</h1>
+
+        <div class="highlight-box">
+            <strong>Purpose of this Briefing</strong><br>
+            This document summarises the current stage of UniVibe and outlines specific areas where collaboration with the Careers and Enterprise team could accelerate a disciplined campus pilot.
+        </div>
+
+        <h2>What is UniVibe?</h2>
+        <p>
+            UniVibe is a student-only, campus-focused digital marketplace that connects students who need short, practical or creative help with other verified students who can deliver those services for pay. 
+            It formalises existing informal work (WhatsApp groups, word-of-mouth, ad hoc favours) into a safer, structured, and employability-aligned system.
+        </p>
+
+        <h2>Why You Are Receiving This Now</h2>
+        <p>
+            Following our recent conversation, I took additional time to determine the most effective way to present the material so that the level of work completed, and the fit with Careers/Enterprise priorities, is clear. 
+            This briefing therefore acts as a focused, web-friendly overview of a larger body of academic and practical work already completed on UniVibe.
+        </p>
+
+        <div class="metric-grid">
+            <div class="metric-card">
+                <div class="number">3</div>
+                <div class="label">Major academic reports (idea evolution, BMC, and financial forecasting)</div>
+            </div>
+            <div class="metric-card">
+                <div class="number">26</div>
+                <div class="label">Students surveyed in structured validation study</div>
+            </div>
+            <div class="metric-card">
+                <div class="number">24</div>
+                <div class="label">Months of forward cash-flow modelling completed</div>
+            </div>
+            <div class="metric-card">
+                <div class="number">1</div>
+                <div class="label">Working MVP prototype (web/mobile)</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- BEYOND A TRADITIONAL BMC -->
+    <div class="page page-break">
+        <h1>Beyond a Traditional Business Model Canvas</h1>
+
+        <div class="highlight-box">
+            <strong>Key Message</strong><br>
+            UniVibe has progressed significantly beyond the level of a traditional Business Model Canvas. 
+            It sits at the \"evidence-based pilot design\" stage rather than the \"early idea exploration\" stage.
+        </div>
+
+        <h2>What Has Been Completed</h2>
+        <table class="competitive-table">
+            <thead>
+                <tr>
+                    <th>Aspect</th>
+                    <th>Typical Early-Stage BMC</th>
+                    <th>UniVibe Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Business Model</td>
+                    <td>Single static canvas, assumption-led</td>
+                    <td>Full BMC plus PESTEL, Five Forces, SWOT/TOWS, and Value Proposition Canvas, iterated across three academic submissions</td>
+                </tr>
+                <tr>
+                    <td>Customer Insight</td>
+                    <td>Persona sketches and anecdotal insight</td>
+                    <td>Empathy mapping, design thinking, and a 26-student survey focusing on trust, pricing, and employability value</td>
+                </tr>
+                <tr>
+                    <td>Validation</td>
+                    <td>Informal conversations and desk research</td>
+                    <td>Structured primary data collection, secondary research synthesis, and lean experimentation logic (test cards, KPIs)</td>
+                </tr>
+                <tr>
+                    <td>Financials</td>
+                    <td>High-level revenue idea (e.g., \"take a commission\")</td>
+                    <td>IAS 7-aligned 24-month cash flow, 4-way break-even analysis, and funding scenario planning</td>
+                </tr>
+                <tr>
+                    <td>Product</td>
+                    <td>Concept mock-ups or sketches</td>
+                    <td>Functional prototype (web-first), including verification flow, task posting, booking, and skills transcript views</td>
+                </tr>
+                <tr>
+                    <td>Institutional Fit</td>
+                    <td>General \"we will work with the university\" statement</td>
+                    <td>Defined partnership use-cases: careers dashboards, micro-credentials, and compliance-aware campus pilots</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Development Journey to Date</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <strong>Idea Formation & Rebrand</strong> – Identification of gap in informal campus work; rebranded from \"Viberr\" to \"UniVibe\" to avoid trademark issues and emphasise university focus.
+            </div>
+            <div class="timeline-item">
+                <strong>Lego Serious Play & Design Thinking</strong> – Visualisation of platform architecture, trust flows, and institutional analytics; refinement through empathy mapping and \"How might we…\" problem statements.
+            </div>
+            <div class="timeline-item">
+                <strong>Market & Strategy Analysis</strong> – PESTEL, Five Forces, competitor grid, SWOT/TOWS, and stakeholder mapping, framed around student work trends and gig economy research.
+            </div>
+            <div class="timeline-item">
+                <strong>Validation & Prototype</strong> – Survey of 26 students on trust, pricing, and skills signalling; development of a working UniVibe prototype to test flows and gather feedback.
+            </div>
+            <div class="timeline-item">
+                <strong>Financial Forecast & Risk Assessment</strong> – Detailed forecasting for 2026–2028, structured break-even analysis, and evaluation of funding routes and risk mitigations.
+            </div>
+        </div>
+    </div>
+
+    <!-- VALIDATION & EMPLOYABILITY ANGLE -->
+    <div class="page page-break">
+        <h1>Student Validation & Employability Value</h1>
+
+        <h2>Key Validation Signals</h2>
+        <p>The student survey and early prototype testing surfaced several consistent patterns:</p>
+        <ul>
+            <li>Students report frequent issues with informal work: delayed payment, non-payment, and unclear expectations.</li>
+            <li>Escrow-style payment and verified profiles are seen as essential, not optional, for in-person and high-trust tasks.</li>
+            <li>A modest monthly subscription is acceptable to providers when it clearly connects to safer work and better visibility.</li>
+            <li>Students strongly value having a documented record of micro-work that they can present as evidence to employers.</li>
+        </ul>
+
+        <div class="quote">
+            \"I already do this kind of work for friends, but there is no way to show it on my CV. If UniVibe can verify and record it, that would actually help me when applying for jobs.\"
+        </div>
+
+        <h2>The Skills Transcript Concept</h2>
+        <p>
+            Every completed task on UniVibe can be captured as a micro-experience, including task type, feedback, and relevant skills. 
+            These entries form a Skills Transcript that sits between a traditional CV and a portfolio, making informal student work visible and legible to employers.
+        </p>
+        <ul>
+            <li>Maps naturally to existing graduate attribute frameworks.</li>
+            <li>Supports reflective practice and evidence-based applications.</li>
+            <li>Provides the university with anonymised, aggregate insight into student skill development and activity.</li>
+        </ul>
+
+        <h2>Alignment with Careers & Enterprise Priorities</h2>
+        <ul>
+            <li><strong>Employability:</strong> Converts informal work into evidence that can be used in applications, interviews, and careers guidance sessions.</li>
+            <li><strong>Enterprise:</strong> Encourages students to treat their skills as services, developing pricing, communication, and client management capability.</li>
+            <li><strong>Data & Insight:</strong> Offers a route to understanding what kinds of skills students are monetising and where gaps exist.</li>
+        </ul>
+    </div>
+
+    <!-- FINANCIAL & OPERATIONAL READINESS -->
+    <div class="page page-break">
+        <h1>Financial & Operational Readiness</h1>
+
+        <div class="financial-summary">
+            <h2>Headline Financial View (Pilot-Ready Stage)</h2>
+            <ul>
+                <li><strong>Revenue Model:</strong> Provider subscription (e.g. £4.99/month) plus commission on completed tasks, with potential institutional licence for analytics/dashboard.</li>
+                <li><strong>Break-even:</strong> Operating break-even forecast within the first 12 months at relatively modest penetration of the Salford student base.</li>
+                <li><strong>Capital Efficiency:</strong> Lean cost base, limited fixed overheads, and staged use of external funding.</li>
+            </ul>
+        </div>
+
+        <h2>What Exists Today</h2>
+        <ul>
+            <li>Structured financial forecasting for a Salford-first launch (cash flow, break-even, and risk scenarios).</li>
+            <li>Clarity on demand assumptions (user growth, transaction frequency, and pricing).</li>
+            <li>Preliminary thinking on funding sources (grants, competitions, and later-stage investment) that could complement university support.</li>
+        </ul>
+
+        <h2>Operational Building Blocks in Place</h2>
+        <ul>
+            <li>Verification-first account creation flow (students only).</li>
+            <li>Task posting, discovery, booking, and escrow-style payment logic.</li>
+            <li>Skills Transcript structure aligned with employability objectives.</li>
+            <li>Initial risk and safeguarding considerations (e.g. hour limits, dispute handling).</li>
+        </ul>
+    </div>
+
+    <!-- PARTNERSHIP OPPORTUNITIES WITH CAREERS/ENTERPRISE -->
+    <div class="page page-break">
+        <h1>Partnership Opportunities with Careers & Enterprise</h1>
+
+        <div class="><!-- truncated for brevity --></div>
