@@ -21,8 +21,13 @@
             max-width: 210mm;
             margin: 0 auto;
             padding: 20px;
-            background: #f8f9fa;
+            /* subtle vertical gradient for more polished look */
+            background: linear-gradient(to bottom, #f8f9fa, #e9ecef);
         }
+
+        /* add rounded corners to pages for a softer, presentation feel */
+        .page { border-radius: 12px; }
+
         
         .page {
             background: white;
@@ -228,6 +233,48 @@
         .toc li { margin: 8px 0; }
         .toc a { color: #764ba2; text-decoration: none; font-weight: 600; }
         .toc a:hover { text-decoration: underline; }
+
+        /* BUSINESS MODEL CANVAS SECTION */
+        .bmc-container {
+            margin-top: 30px;
+            font-family: inherit;
+        }
+        .bmc-grid {
+            display: grid;
+            grid-template-columns: 2fr 2fr 2fr 2fr;
+            grid-template-rows: auto auto auto;
+            gap: 8px;
+        }
+        .bmc-cell {
+            border: 1px solid #e1e8ed;
+            padding: 10px;
+            font-size: 13px;
+            background: #fcfcff;
+            vertical-align: top;
+        }
+        .bmc-cell h3 {
+            margin: 0 0 6px 0;
+            font-size: 13px;
+            color: #667eea;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        /* Layout mapping */
+        .bmc-key-partners    { grid-column: 1 / 2; grid-row: 1 / 3; }
+        .bmc-key-activities  { grid-column: 2 / 3; grid-row: 1 / 2; }
+        .bmc-value-prop      { grid-column: 3 / 4; grid-row: 1 / 3; }
+        .bmc-customer-rel    { grid-column: 4 / 5; grid-row: 1 / 2; }
+        .bmc-key-resources   { grid-column: 2 / 3; grid-row: 2 / 3; }
+        .bmc-channels        { grid-column: 4 / 5; grid-row: 2 / 3; }
+        .bmc-cost-structure  { grid-column: 1 / 3; grid-row: 3 / 4; }
+        .bmc-revenue-streams { grid-column: 3 / 5; grid-row: 3 / 4; }
+        .bmc-cell ul {
+            margin: 0;
+            padding-left: 18px;
+        }
+        .bmc-cell li {
+            margin-bottom: 4px;
+        }
     </style>
 </head>
 <body>
@@ -254,6 +301,7 @@
             <ul>
                 <li><a href="#introduction">Introduction & Context</a></li>
                 <li><a href="#bmc">Beyond a Traditional Business Model Canvas</a></li>
+                <li><a href="#business-model-canvas">Business Model Canvas</a></li>
                 <li><a href="#validation">Student Validation & Employability Value</a></li>
                 <li><a href="#financial">Financial & Operational Readiness</a></li>
                 <li><a href="#partnerships">Partnership Opportunities with Careers & Enterprise</a></li>
@@ -373,6 +421,125 @@
             </div>
             </div>
         </div>
+    </div>
+
+    <!-- BUSINESS MODEL CANVAS SECTION -->
+    <div class="page page-break" id="business-model-canvas">
+      <h1>UniVibe – Business Model Canvas</h1>
+
+      <p>
+        The canvas below presents the current UniVibe model in the standard Business Model Canvas structure,
+        reflecting the detailed analysis and validation work completed to date.
+      </p>
+
+      <div class="bmc-container">
+        <div class="bmc-grid">
+          <!-- KEY PARTNERS -->
+          <div class="bmc-cell bmc-key-partners">
+            <h3>Key Partners</h3>
+            <ul>
+              <li>University of Salford (careers, employability, student records)</li>
+              <li>Student Union and student societies</li>
+              <li>Payment and escrow providers</li>
+              <li>Cloud hosting and security vendors</li>
+              <li>Legal and compliance advisors (GDPR, student work regulations)</li>
+              <li>Early local SME partners for pilot demand</li>
+            </ul>
+          </div>
+
+          <!-- KEY ACTIVITIES -->
+          <div class="bmc-cell bmc-key-activities">
+            <h3>Key Activities</h3>
+            <ul>
+              <li>Developing and maintaining the UniVibe platform (web/mobile)</li>
+              <li>Student verification and trust/safety operations</li>
+              <li>Onboarding and supporting student providers and users</li>
+              <li>Designing and updating Skills Transcripts and micro‑credentials</li>
+              <li>Running campus‑based activation and referral campaigns</li>
+              <li>Monitoring KPIs and iterating the model (liquidity, retention, disputes)</li>
+            </ul>
+          </div>
+
+          <!-- VALUE PROPOSITION -->
+          <div class="bmc-cell bmc-value-prop">
+            <h3>Value Proposition</h3>
+            <ul>
+              <li><strong>For student service users:</strong> quick, affordable, trusted access to peers for short, practical and creative tasks on campus.</li>
+              <li><strong>For student service providers:</strong> flexible, compliant earning opportunities that fit around study.</li>
+              <li>Closed, student‑only marketplace with verified identities and enrolment.</li>
+              <li>Escrow‑style payments to reduce non‑payment and disputes.</li>
+              <li>Skills Transcript that turns informal work into credible employability evidence.</li>
+              <li>Alignment with university employability and enterprise objectives.</li>
+            </ul>
+          </div>
+
+          <!-- CUSTOMER RELATIONSHIPS -->
+          <div class="bmc-cell bmc-customer-rel">
+            <h3>Customer Relationships</h3>
+            <ul>
+              <li>Guided onboarding with verification and clear safeguards.</li>
+              <li>In‑app support, FAQs and simple dispute resolution.</li>
+              <li>Reputation system (ratings, reviews, badges) for providers.</li>
+              <li>Community‑building via campus champions and referrals.</li>
+              <li>Targeted communication around skills development and credentials.</li>
+            </ul>
+          </div>
+
+          <!-- KEY RESOURCES -->
+          <div class="bmc-cell bmc-key-resources">
+            <h3>Key Resources</h3>
+            <ul>
+              <li>UniVibe platform (codebase, infrastructure, data)</li>
+              <li>Verification and trust/safety processes</li>
+              <li>Skills Transcript and credentialing framework</li>
+              <li>Founding team (technical, product, and enterprise expertise)</li>
+              <li>Institutional relationships with university services and SU</li>
+              <li>Brand positioned around safety, employability and student identity</li>
+            </ul>
+          </div>
+
+          <!-- CHANNELS -->
+          <div class="bmc-cell bmc-channels">
+            <h3>Channels</h3>
+            <ul>
+              <li>University and SU communication channels (email, VLE, events)</li>
+              <li>Student societies and course reps</li>
+              <li>On‑campus ambassadors and peer referrals</li>
+              <li>Social media targeted at Salford students</li>
+              <li>Careers events and employability workshops</li>
+            </ul>
+          </div>
+
+          <!-- COST STRUCTURE -->
+          <div class="bmc-cell bmc-cost-structure">
+            <h3>Cost Structure</h3>
+            <ul>
+              <li>Platform development and hosting</li>
+              <li>Payment processing and escrow costs</li>
+              <li>Founders’ stipends and part‑time operational support</li>
+              <li>Legal, insurance and compliance costs</li>
+              <li>Marketing, ambassadors and campus activation</li>
+              <li>Ongoing product improvement and analytics</li>
+            </ul>
+          </div>
+
+          <!-- REVENUE STREAMS -->
+          <div class="bmc-cell bmc-revenue-streams">
+            <h3>Revenue Streams</h3>
+            <ul>
+              <li>Monthly subscription from student service providers (e.g. £4.99)</li>
+              <li>Commission on completed tasks (percentage of transaction value)</li>
+              <li>Institutional dashboard and analytics licences for universities</li>
+              <li>Potential future premium features for providers (priority listing, advanced analytics)</li>
+              <li>Longer‑term: sponsored skills pathways or partnerships with selected employers/SMEs</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <p style="font-size: 13px; color: #666; margin-top: 10px;">
+        This canvas reflects the current UniVibe design. Several blocks (particularly partners, channels, and value propositions around employability) are intended to be co‑developed further with the Careers and Enterprise team during a Salford‑first pilot.
+      </p>
     </div>
 
     <!-- VALIDATION & EMPLOYABILITY ANGLE -->
