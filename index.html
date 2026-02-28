@@ -11,6 +11,8 @@
             .no-print { display: none; }
         }
         
+        html { scroll-behavior: smooth; }
+
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
@@ -218,6 +220,13 @@
         .cta-button:hover {
             opacity: 0.9;
         }
+
+        /* Table of contents */
+        .toc { max-width: 720px; margin: 0 auto; }
+        .toc ul { list-style: none; padding-left: 0; }
+        .toc li { margin: 8px 0; }
+        .toc a { color: #764ba2; text-decoration: none; font-weight: 600; }
+        .toc a:hover { text-decoration: underline; }
     </style>
 </head>
 <body>
@@ -231,15 +240,29 @@
             University of Salford
         </div>
         <div class="details">
-            Prepared for: Paul [Surname], Careers & Enterprise<br>
-            Prepared by: [Your Name], MSc Entrepreneurship & Innovation<br>
+            Prepared for: Paul Ledsham, Careers & Enterprise<br>
+            Prepared by: J. A. Deyma Ayoade, MSc Entrepreneurship & Innovation<br>
             February 2026
         </div>
     </div>
 
+    <!-- TABLE OF CONTENTS -->
+    <div class="page">
+        <h2 id="toc-heading">Table of Contents</h2>
+        <nav class="toc">
+            <ul>
+                <li><a href="#introduction">Introduction & Context</a></li>
+                <li><a href="#bmc">Beyond a Traditional Business Model Canvas</a></li>
+                <li><a href="#validation">Student Validation & Employability Value</a></li>
+                <li><a href="#financial">Financial & Operational Readiness</a></li>
+                <li><a href="#partnerships">Partnership Opportunities with Careers & Enterprise</a></li>
+            </ul>
+        </nav>
+    </div>
+
     <!-- INTRO & CONTEXT -->
     <div class="page page-break">
-        <h1>Introduction & Context</h1>
+        <h1 id="introduction">Introduction & Context</h1>
 
         <div class="highlight-box">
             <strong>Purpose of this Briefing</strong><br>
@@ -280,7 +303,7 @@
 
     <!-- BEYOND A TRADITIONAL BMC -->
     <div class="page page-break">
-        <h1>Beyond a Traditional Business Model Canvas</h1>
+        <h1 id="bmc">Beyond a Traditional Business Model Canvas</h1>
 
         <div class="highlight-box">
             <strong>Key Message</strong><br>
@@ -332,28 +355,28 @@
         </table>
 
         <h2>Development Journey to Date</h2>
-        <div class="timeline">
             <div class="timeline-item">
-                <strong>Idea Formation & Rebrand</strong> – Identification of gap in informal campus work; rebranded from \"Viberr\" to \"UniVibe\" to avoid trademark issues and emphasise university focus.
+                <strong>Idea Formation & Rebrand</strong> — Identification of gap in informal campus work; rebranded from "Viberr" to "UniVibe" to avoid trademark issues and emphasise university focus.
             </div>
             <div class="timeline-item">
-                <strong>Lego Serious Play & Design Thinking</strong> – Visualisation of platform architecture, trust flows, and institutional analytics; refinement through empathy mapping and \"How might we…\" problem statements.
+                <strong>Lego Serious Play & Design Thinking</strong> — Visualisation of platform architecture, trust flows, and institutional analytics; refinement through empathy mapping and "How might we…" problem statements.
             </div>
             <div class="timeline-item">
-                <strong>Market & Strategy Analysis</strong> – PESTEL, Five Forces, competitor grid, SWOT/TOWS, and stakeholder mapping, framed around student work trends and gig economy research.
+                <strong>Market & Strategy Analysis</strong> — PESTEL, Five Forces, competitor grid, SWOT/TOWS, and stakeholder mapping, framed around student work trends and gig economy research.
             </div>
             <div class="timeline-item">
-                <strong>Validation & Prototype</strong> – Survey of 26 students on trust, pricing, and skills signalling; development of a working UniVibe prototype to test flows and gather feedback.
+                <strong>Validation & Prototype</strong> — Survey of 26 students on trust, pricing, and skills signalling; development of a working UniVibe prototype to test flows and gather feedback.
             </div>
             <div class="timeline-item">
-                <strong>Financial Forecast & Risk Assessment</strong> – Detailed forecasting for 2026–2028, structured break-even analysis, and evaluation of funding routes and risk mitigations.
+                <strong>Financial Forecast & Risk Assessment</strong> — Detailed forecasting for 2026—2028, structured break-even analysis, and evaluation of funding routes and risk mitigations.
+            </div>
             </div>
         </div>
     </div>
 
     <!-- VALIDATION & EMPLOYABILITY ANGLE -->
     <div class="page page-break">
-        <h1>Student Validation & Employability Value</h1>
+        <h1 id="validation">Student Validation & Employability Value</h1>
 
         <h2>Key Validation Signals</h2>
         <p>The student survey and early prototype testing surfaced several consistent patterns:</p>
@@ -389,7 +412,7 @@
 
     <!-- FINANCIAL & OPERATIONAL READINESS -->
     <div class="page page-break">
-        <h1>Financial & Operational Readiness</h1>
+        <h1 id="financial">Financial & Operational Readiness</h1>
 
         <div class="financial-summary">
             <h2>Headline Financial View (Pilot-Ready Stage)</h2>
@@ -420,4 +443,64 @@
     <div class="page page-break">
         <h1>Partnership Opportunities with Careers & Enterprise</h1>
 
-        <div class="><!-- truncated for brevity --></div>
+        <div class="highlight-box">
+            <strong>Summary</strong><br>
+            UniVibe does not need help to "define an idea"; it needs institutional partners to help design and deliver a safe, evidence-led campus pilot that advances student employability and enterprise outcomes.
+        </div>
+
+        <h2>Where Careers & Enterprise Can Add Most Value</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Area</th>
+                    <th>What Exists</th>
+                    <th>Potential Role for Careers/Enterprise</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Pilot Design</td>
+                    <td>Pilot parameters drafted (scope, campus-only focus, KPIs).</td>
+                    <td>Co-design a 6—12 month Salford pilot, including student cohorts, key milestones, and evaluation criteria.</td>
+                </tr>
+                <tr>
+                    <td>Student Recruitment</td>
+                    <td>Concept for "anchor providers" and early adopters.</td>
+                    <td>Promote to entrepreneurial students and societies; identify 20—30 initial service providers and a similar number of service users.</td>
+                </tr>
+                <tr>
+                    <td>Employability Integration</td>
+                    <td>Skills Transcript and micro-credential structures drafted.</td>
+                    <td>Align transcripts and micro-credentials with Salford's employability and graduate attribute frameworks; explore recognition in awards or schemes.</td>
+                </tr>
+                <tr>
+                    <td>Verification & Compliance</td>
+                    <td>Verification-first logic; consideration of hour limits and safeguarding.</td>
+                    <td>Advise on policy alignment, signpost to relevant university teams, and explore technical routes for enrolment/ID verification.</td>
+                </tr>
+                <tr>
+                    <td>Data & Analytics</td>
+                    <td>Concept for institutional dashboards.</td>
+                    <td>Co-define metrics that would be most useful for Careers/Enterprise (e.g. skills developed, hours worked, types of activity).</td>
+                </tr>
+                <tr>
+                    <td>Funding & Visibility</td>
+                    <td>Initial mapping of grant and competition options.</td>
+                    <td>Signpost relevant internal funds or competitions; provide letters of support or case study input where appropriate.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Proposed Next Steps</h2>
+        <ol>
+            <li>Short meeting to walk through this briefing and discuss priorities and constraints from the Careers/Enterprise perspective.</li>
+            <li>Jointly identify 2—3 focused pilot objectives (e.g. “X students with Skills Transcripts by end of academic year”).</li>
+            <li>Co-design a lightweight pilot plan (timelines, cohorts, and success metrics).</li>
+            <li>Agree on evaluation and decision-point moments (e.g. 3-month and 6-month reviews).</li>
+        </ol>
+
+        <div class="button-container">
+            <a href="mailto:paul.ledsham@salford.ac.uk?subject=UniVibe%20Careers%20Pilot%20Discussion" class="cta-button">
+                Express Interest / Arrange a Discussion
+            </a>
+        </div>
